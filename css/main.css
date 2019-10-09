@@ -1,0 +1,634 @@
+/*RESET CSS BEGIN*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+/*RESET CSS END*/
+
+
+/*HELPER CLASS BEGIN*/
+img{
+    max-width: 100%;
+}
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+p,
+ul li,
+ol li {
+    font-size: 16px;
+    line-height: 23px;
+    margin: 0 0 20px 0;
+}
+
+ul li,
+ol li {
+    margin-bottom: 10px;
+}
+
+
+/*HELPER CLASS END*/
+
+* {
+    box-sizing: border-box;
+    outline: 0;
+}
+.wrapper{
+    max-width: 1100px;
+    width:100%;
+    margin:0 auto;
+}
+/*NAVIGATOR START*/
+
+header{
+    background: transparent;
+    width:100%;
+}
+nav.nav-wrapper{
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+}
+header .logo img{
+    max-width: 100px;
+}
+header ul li{
+    display: inline-block;
+    margin: 0 10px;
+}
+header ul li a{
+    line-height: 0;
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.2s;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+header.sticky{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7) ;
+    transform: translateY(-200%);
+
+}
+body.scroll header.sticky{
+    transition: 0.2s;
+    transform: translateY(0%);
+    
+}
+
+
+
+/*NAVIGATOR END*/
+
+/*Parallax page style START*/
+section.cover-main{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    height: 60vh;
+}
+
+ul#scene li.name{
+    text-align: center;
+    font-size: 60px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    width:100%;
+    margin-top: 10%;
+}
+
+ul#scene li.title{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    line-height: 35px;
+    color: white;
+    width:100%;
+    margin-top: 5%;
+}
+ul#scene li.title.two{
+    margin-top: 75px;
+}
+.btn{
+    margin-top:150px;
+    width: 100%;
+    text-align: center;
+}
+.portfolio-btn,
+.contact-btn{
+    margin: 0 auto;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid white;
+    background: transparent;
+    color:white;
+    text-decoration: none;
+
+}
+
+.portfolio-btn:hover,
+.contact-btn:hover{
+    transition: 0.2s;
+    background:white;
+    color: black;
+}
+
+.portfolio-btn{
+    margin-right: 30px;
+}
+.contact-btn{
+    margin-left:30px;
+}
+/*Parallax page style END*/
+
+/*Masonry grid START*/
+header{
+    z-index: 6;
+}
+.masonry-grid{
+    position: relative;
+}
+
+.grid{
+    margin: 0 auto;
+}
+
+.grid-item {
+    width: 450px;
+    margin-bottom: 10px;
+  }
+.tall-img{
+    height: 680px;
+}
+h2.sub-title{
+    position: relative;
+    display: block;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 35px;
+    line-height: 40px;
+}
+h2.sub-title::after{
+    display: block;
+    height:2px;
+    background-color: black;
+    content: "";
+    width: 100px;
+    margin: 30px auto 0 auto;
+}
+/*Masonry grid END*/
+
+/*Beating Heart START*/
+
+section.beating-heart{
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url('../images/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover; 
+    text-align: center;
+    height: 100vh;
+    padding: 50px 10px;
+    color: white;
+    
+}
+svg.heart{
+    width: 100px;
+    position: relative;
+    margin: 0,50px;
+    fill: red;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    15%{
+        transform: scale(1.25);
+    }
+    25%{
+        transform: scale(1.15);
+    }
+    35%{
+        transform: scale(1.25);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+svg.heart2{
+    width: 200px;
+    position: relative;
+    margin-top: 20px;
+    fill: rgba(255, 230, 0, 0.548);
+    animation: bounce-in 3s infinite;
+    animation-timing-function: ease-out
+}
+@keyframes bounce-in{
+    0%{
+        fill: white;
+        transform: translate(50vw,0);
+        opacity: 1;
+    }
+    20%{
+        fill: red;
+        transform: translate(-25vw,0);
+
+    }
+    40%{
+        transform: translate(12.5vw,0);
+
+    }
+    60%{
+        transform: translate(-6.25vw,0);
+        fill-opacity: 1;
+
+    }
+    80%{
+        transform: translate(3.125vw,0);
+    }
+    100%{
+        fill-opacity: 0;
+    }
+}
+/* ANIMATION OF HEADER AND SUB-TITLE*/
+
+/* #home img.logo,
+#home .menu{
+    animation-name: drop-in-header;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes drop-in-header{
+    0%{
+        transform: translate(0,-10vh);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+#work .sub-title{
+    animation-name: drop-in-subtitle;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes drop-in-subtitle{
+    0%{
+        transform: translate(0,-10vh);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.2;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0,0);
+    }
+} */
+
+
+section.beating-heart h2:after{
+    background-color: white;
+}
+section.beating-heart span{
+    font-size: 100px;
+    font-family: 'Oswald', sans-serif;
+}
+
+/*Beating Heart END*/
+
+/* SLIDER STYLE START */
+.slider{
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    color: green;
+}
+#slider div.slide{
+    max-height: 25vh;
+}
+/* SLIDER STYLE END */
+
+/* footer STYLE START */
+
+#footer{
+    position: relative;
+    z-index:-2;
+    height: 18vh;
+    background: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+
+}
+#footer h1{
+    font-size: 20px;
+    position: fixed;
+    line-height: 25px;
+    color: white;
+    bottom: 8vh;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+
+/* footer STYLE END */
+
+/* RESPONSIVE MENU */
+
+@media only screen and (max-width: 768px) {
+    .menu-trigger{
+        background: url(../images/hamburger-icon.svg) no-repeat center /cover;
+        width: 35px;
+        height: 35px;
+        display: block;
+        z-index: 10;
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    .main-overlay{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.705);
+        z-index:5;
+        display: none;
+}
+    .main-overlay::after{
+        background: url(../images/close-icon.svg) no-repeat center /cover;
+        width: 35px;
+        height: 35px;
+        display: block;
+        content: "";
+        position: fixed;
+        top:10px;
+        right: 10px;
+        z-index: 20;
+        display: none;
+    }
+    .menu{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background: #131313;
+        width: 100%;
+        max-width: 300px;
+        z-index: 30;
+        transform: translate3d(-100%,0,0);
+    }
+    nav.nav-wrapper ul li {
+        display: block;
+        margin-top: 20px;
+        padding: 0;
+        padding-bottom: 20px;
+
+    }
+
+    nav.nav-wrapper ul li a{
+        font-size: 18px;
+        line-height: 23px;
+        
+    }
+    nav.nav-wrapper ul li a:hover{
+        border-color: transparent;
+    }
+    body.menu-is-active .menu{
+        transform: translate3d(0,0,0);
+        display: block;
+    }
+    body.menu-is-active .main-overlay,
+    body.menu-is-active .main-overlay::after{
+        display: block;
+    }
+    body.menu-is-active .menu-trigger{
+        display: none;
+    }
+
+    /* visuals corrected */
+    ul#scene li.name{
+        font-size: 25px;
+        margin-top: 0;
+    }
+    ul#scene li.title{
+        font-size: 15px;
+        margin-top: 45px;
+        margin-bottom: 0;
+    }
+    .btn{
+        margin-top: 15vh;
+    }
+    .portfolio-btn,
+    .contact-btn{
+    margin: 20px auto;
+    display: block;
+    width: 140px;
+    }
+    h2.sub-title{
+        margin: 30px;
+        font-size: 23px;
+        line-height: 25px;
+    }
+    .grid-item {
+        width: initial;
+    }
+  
+    .tall-img {
+      height: initial;
+    }
+    #about span{
+        font-size: 30px
+    }
+    #about .heart,
+    #about .heart2{
+        height: 30px;
+        width: 35px;
+    }
+
+}
+
